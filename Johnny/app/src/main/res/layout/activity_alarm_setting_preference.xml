@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <PreferenceCategory
+        android:summary="알람 정보"
+        android:title="알람 정보" >
+        <EditTextPreference
+            android:key="title"
+            android:summary="알람 제목을 입력하세요"
+            android:title="title" />
+
+        <hedge.johnny.hedgeWidget.TimePickerPreference
+            android:summary="알람 시간을 설정하세요"
+            android:key="time"
+            android:dialogTitle="알람 시간을 설정하세요"
+            android:title="알람 시간" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:summary="추가 설정"
+        android:title="추가 설정" >
+        <VolumePreference
+            android:key="volume"
+            android:summary="볼륨"
+            android:title="알람 볼륨 설정" />
+
+        <MultiSelectListPreference
+
+            android:key="daylistOptions"
+            android:summary="요일 설정"
+            android:title="요일 설정" />
+
+        <!--android:entries="@array/daylistOptions"
+            android:entryValues="@array/daylistValues"-->
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="완료">
+        <Preference android:title="저장" android:key="save"/>
+        <Preference android:title="춰소" android:key="cancle"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
